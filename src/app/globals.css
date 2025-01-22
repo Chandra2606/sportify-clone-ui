@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "SpotifyMix";
+  src: url("/fonts/SpotifyMix-Bold.ttf") format("truetype"),
+    url("/fonts/SpotifyMix-Bold.woff2") format("woff2"),
+    url("/fonts/SpotifyMix-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
