@@ -13,24 +13,5 @@ Proyek ini adalah clone dari aplikasi Spotify yang dibuat menggunakan teknologi 
 
 🚧 **Masih dalam tahap pengembangan** 🚧
 
-Fitur yang sudah diimplementasikan:
-
-- ✅ Navbar responsif
-- ✅ Komponen UI dasar (Button, Card, Searchbar)
-- ✅ Layout dasar mirip Spotify
-- ✅ Font kustom Spotify
-
-Fitur yang akan datang:
-
-- ⏳ Integrasi audio player
-- ⏳ Sistem autentikasi
-- ⏳ Manajemen playlist
-- ⏳ Halaman detail lagu/album
-
-## 🎨 Preview
-
-_Screenshot akan ditambahkan setelah pengembangan lebih lanjut_
-
-## 🏃‍♂️ Cara Menjalankan Proyek
-
-1. Clone repositori
+Tetap pantau perkembangan proyek ini untuk mendapatkan update terbaru! 🎵✨
+author: [@Rafi Chandra](https://github.com/chandra2606)
