@@ -11,6 +11,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SpotifyMixRegular";
+  src: url("/fonts/SpotifyMix-Regular.ttf") format("truetype"),
+    url("/fonts/SpotifyMix-Regular.woff2") format("woff2"),
+    url("/fonts/SpotifyMix-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

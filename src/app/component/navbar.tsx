@@ -29,14 +29,14 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-2 ml-4">
-          <ButtonWhite>Jelajahi Premium</ButtonWhite>
-          <ButtonBlack>
+          <ButtonWhite className="w-40">Jelajahi Premium</ButtonWhite>
+          <ButtonBlack className="w-44">
             <div className="rounded-full p-2 cursor-pointer">
               <ArrowDownToLine className="w-5 h-5 text-white-400" />
             </div>
             Pasang Aplikasi
           </ButtonBlack>
-          <ButtonBlack>
+          <ButtonBlack className="w-14">
             <div className="rounded-full p-2 cursor-pointer">
               <Bell className="w-5 h-5 text-gray-400" />
             </div>
@@ -57,11 +57,11 @@ export default function Navbar() {
       </nav>
 
       {isMenuOpen && (
-        <div className="md:hidden fixed top-20 right-2 bg-[#282828] rounded-lg shadow-lg p-4 w-[90%] max-w-[300px] z-50 transition-all duration-300 ease-in-out transform origin-top-right ${isMenuOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}">
+        <div className="md:hidden fixed top-20 right-2 bg-[#282828] rounded-lg shadow-lg p-4 w-[90%] max-w-[300px] z-50">
           <div className="flex flex-col gap-4">
-            <ButtonWhite>Jelajahi Premium</ButtonWhite>
+            <ButtonWhite className="w-full">Jelajahi Premium</ButtonWhite>
 
-            <ButtonBlack>
+            <ButtonBlack className="w-full">
               <ArrowDownToLine className="w-5 h-5 text-white-400 mr-2" />
               Pasang Aplikasi
             </ButtonBlack>

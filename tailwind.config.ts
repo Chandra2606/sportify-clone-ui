@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         spotify: ["SpotifyMix", "sans-serif"],
+        spotifyreguler: ["SpotifyMixRegular", "sans-serif"],
       },
     },
   },
