@@ -1,14 +1,34 @@
+"use client";
 import Navbar from "@/app/component/navbar";
 import Card from "@/app/component/ui/card";
 import { LibraryBig, Play, Plus, ArrowRight } from "lucide-react";
 import { ButtonWhite } from "./component/ui/button";
+import TabNavigasi from "./component/ui/tabnavigasi";
+import { useEffect, useState } from "react";
+import Playlist from "./component/ui/playlist";
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = (e: any) => {
+      const scrollTop = e.target.scrollTop;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    const cardElement = document.querySelector(".scroll-container");
+    cardElement?.addEventListener("scroll", handleScroll);
+
+    return () => {
+      cardElement?.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className="flex flex-row gap-2">
         <Card className="w-96 ml-4 mt-4 row-span-2">
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center">
@@ -71,6 +91,26 @@ export default function Home() {
                 <span className="font-spotify">Jelajahi podcast</span>
               </ButtonWhite>
             </Card>
+          </div>
+        </Card>
+        <Card className="w-2/3 mt-4 row-span-2 p-8 overflow-y-auto max-h-[calc(100vh-120px)] scroll-container relative">
+          <div className="absolute -top-8 -left-0 -right-0 h-[340px] bg-gradient-to-b from-[#1F1F1F] via-[rgb(18,18,18)] to-transparent z-0" />
+          <div className="flex flex-col gap-4 relative z-10">
+            <div
+              className={`sticky -top-8 -mx-8 z-20 transition-all duration-300 ${
+                isScrolled
+                  ? "bg-[rgb(18,18,18)] backdrop-blur-md"
+                  : "bg-transparent"
+              }`}
+            >
+              <div className="flex flex-col gap-4 px-8 py-4">
+                <div className="flex items-center gap-2">
+                  <TabNavigasi />
+                </div>
+              </div>
+            </div>
+
+            <Playlist />
           </div>
         </Card>
       </div>
