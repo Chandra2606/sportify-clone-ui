@@ -134,5 +134,15 @@ body {
 
 /* Adjust container padding for buttons */
 .mySwiper {
-  padding: 0 40px !important;
+  padding: 0 40px 0 0 !important;
+}
+
+/* Sesuaikan posisi button prev */
+.swiper-button-prev {
+  left: 0 !important;
+}
+
+/* Sesuaikan posisi button next */
+.swiper-button-next {
+  right: 0 !important;
 }
