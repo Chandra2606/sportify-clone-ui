@@ -3,6 +3,7 @@ import { useState } from "react";
 import { House, ArrowDownToLine, Menu, Bell, User } from "lucide-react";
 import Searchbar from "@/app/component/ui/searchbar";
 import { ButtonWhite, ButtonBlack } from "@/app/component/ui/button";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,13 @@ export default function Navbar() {
     <>
       <nav className=" flex items-center h-14 px-2 sm:px-4 mt-3 relative">
         <div className="flex items-center justify-center w-12 sm:w-16">
-          <img
+          <Image
             src="/image/logo.png"
             alt="logo"
+            width={32}
+            height={32}
             className="w-6 h-6 sm:w-8 sm:h-8"
+            priority
           />
         </div>
 
