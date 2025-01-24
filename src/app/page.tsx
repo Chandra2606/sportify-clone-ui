@@ -1,25 +1,36 @@
 "use client";
 import Navbar from "@/app/component/navbar";
 import Card from "@/app/component/ui/card";
-import { LibraryBig, Play, Plus, ArrowRight } from "lucide-react";
+import { LibraryBig, Plus, ArrowRight } from "lucide-react";
 import { ButtonWhite } from "./component/ui/button";
 import TabNavigasi from "./component/ui/tabnavigasi";
-import { useEffect, useState } from "react";
+import { useEffect, useState, UIEvent } from "react";
 import Playlist from "./component/ui/playlist";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = (e: any) => {
-      const scrollTop = e.target.scrollTop;
+    const handleScroll = (e: UIEvent<HTMLDivElement>) => {
+      const scrollTop = e.currentTarget.scrollTop;
       setIsScrolled(scrollTop > 0);
     };
 
-    const cardElement = document.querySelector(".scroll-container");
-    cardElement?.addEventListener("scroll", handleScroll);
+    const cardElement =
+      document.querySelector<HTMLDivElement>(".scroll-container");
+    if (cardElement) {
+      cardElement.addEventListener(
+        "scroll",
+        handleScroll as unknown as EventListener
+      );
+    }
 
     return () => {
-      cardElement?.removeEventListener("scroll", handleScroll);
+      if (cardElement) {
+        cardElement.removeEventListener(
+          "scroll",
+          handleScroll as unknown as EventListener
+        );
+      }
     };
   }, []);
 
